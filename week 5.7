@@ -1,0 +1,25 @@
+# Get input from user
+S1 = input().strip()
+S2 = input().strip()
+N = int(input())
+
+# Initialize a set to keep track of characters already printed
+printed_chars = set()
+
+# Initialize a string to store the result
+result = ""
+
+# Iterate through each character in S1
+for char in S1:
+    # Check if the character is present in S2 and not already printed
+    if char in S2 and char not in printed_chars:
+        # Add the character to the result string
+        result += char
+        # Add the character to the printed set
+        printed_chars.add(char)
+        # Break if the result string length reaches N
+        if len(result) == N:
+            break
+
+
+print(result)
