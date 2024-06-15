@@ -1,0 +1,19 @@
+def find_mapping(A, B):
+    # Create a dictionary to map elements of B to their indices
+    index_map = {num: i for i, num in enumerate(B)}
+    # Use list comprehension to find the index mapping for each element in A
+    mapping = [index_map[num] for num in A]
+    return mapping
+
+def main():
+    n = int(input())
+
+    A = list(map(int, input().split()))
+ 
+    B = list(map(int, input().split()))
+    
+    mapping = find_mapping(A, B)
+    print(" ".join(map(str, mapping)))
+
+if __name__ == "__main__":
+    main()
