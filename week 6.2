@@ -1,0 +1,21 @@
+def find_element(locations, element):
+    found = False
+    count = 0
+    for idx, val in enumerate(locations, 1):
+        if val == element:
+            print(f"{element} is present at location {idx}.")
+            count += 1
+            found = True
+    if found:
+        print(f"{element} is present {count} times in the array.")
+    else:
+        print(f"{element} is not present in the array.")
+
+def main():
+    n = int(input())
+    locations = [int(input()) for _ in range(n)]
+    element_to_find = int(input())
+    find_element(locations, element_to_find)
+
+if __name__ == "__main__":
+    main()
