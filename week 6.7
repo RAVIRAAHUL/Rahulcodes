@@ -1,0 +1,18 @@
+def merge_arrays(arr1, arr2):
+    merged_array = arr1 + arr2  # Merge the arrays
+    merged_array = list(set(merged_array))  # Remove duplicates
+    merged_array.sort()  # Sort the merged array
+    return merged_array
+
+def main():
+    n1 = int(input())
+    arr1 = [int(input()) for _ in range(n1)]
+    
+    n2 = int(input())
+    arr2 = [int(input()) for _ in range(n2)]
+    
+    merged_array = merge_arrays(arr1, arr2)
+    print(" ".join(map(str, merged_array)))
+
+if __name__ == "__main__":
+    main()
