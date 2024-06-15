@@ -1,0 +1,22 @@
+# Function to take input from user and insert into set
+def take_input_and_insert():
+    num_set = set()
+    
+    # Take 10 integers from user
+    for i in range(10):
+        num = int(input())
+        num_set.add(num)
+    
+    # Prompt for the 11th element
+    eleventh = int(input())
+    num_set.add(eleventh)
+    print("ITEM to be inserted:" +str(eleventh))
+    print("After insertion array is:")
+    # Print sorted elements
+    for num in sorted(num_set):
+        print(num)
+    
+   
+# Call the function
+
+take_input_and_insert()
