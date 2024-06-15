@@ -1,0 +1,15 @@
+def distinct_elements(array):
+    distinct_set = set(array)
+    distinct_list = list(distinct_set)
+    return distinct_list
+
+def main():
+    n = int(input())
+    array = [int(input()) for _ in range(n)]
+    
+    distinct = distinct_elements(array)
+    for element in distinct:
+        print(element, end=" ")
+
+if __name__ == "__main__":
+    main()
